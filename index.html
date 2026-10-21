@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unione Accademica Sammarinese</title>
+<meta name="description" content="Unione Accademica Sammarinese: associazione senza fini di lucro dei ricercatori e degli accademici di San Marino. Membro di Eurodoc.">
+<meta property="og:title" content="Unione Accademica Sammarinese">
+<meta property="og:description" content="I ricercatori e gli accademici di San Marino, in rete.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Unione Accademica Sammarinese","email":"unioneaccademicasammarinese@gmail.com","logo":"assets/logo.png","foundingDate":"2025-12-29","address":{"@type":"PostalAddress","addressCountry":"SM"}}</script>
+<style>
+:root{--bg:#fff;--soft:#eef5fc;--ink:#14263f;--mut:#566982;--acc:#1a4891;--sky:#cfe3f7;--line:#dbe6f3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a2b;--soft:#13243a;--ink:#e8f0fa;--mut:#a3b5cc;--acc:#7fb2ee;--sky:#1d3a5e;--line:#23406a}}
+:root[data-theme="dark"]{--bg:#0e1a2b;--soft:#13243a;--ink:#e8f0fa;--mut:#a3b5cc;--acc:#7fb2ee;--sky:#1d3a5e;--line:#23406a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--acc)}:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:30}.skip:focus{left:8px}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:20}
+header .w{display:flex;align-items:center;gap:14px;height:64px}
+.logo{height:34px;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo{filter:brightness(2.4) saturate(.6)}}
+:root[data-theme="dark"] .logo{filter:brightness(2.4) saturate(.6)}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{color:var(--mut);text-decoration:none;font-size:14px}nav a:hover{color:var(--acc)}
+.tools{display:flex;gap:8px;align-items:center}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button,.ib{border:0;background:none;color:var(--mut);font:600 12px system-ui;cursor:pointer}
+.lang button{padding:6px 12px}.lang button.on{background:var(--acc);color:var(--bg)}
+.ib{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;font-size:15px}
+#burger{display:none}
+#bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--acc)}
+@media(max-width:760px){#burger{display:block}nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 22px}nav.open{display:flex}nav a{padding:12px 0;font-size:16px}.tools{margin-left:auto}}
+.hero{background:linear-gradient(180deg,var(--soft),var(--bg));padding:70px 0 60px}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .w{grid-template-columns:1fr}}
+.eyebrow{color:var(--acc);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.12;margin:12px 0 18px;font-weight:700}
+.lead{color:var(--mut);font-size:18px;max-width:640px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font:600 15px system-ui;text-decoration:none;border:1px solid var(--acc);cursor:pointer}
+.p{background:var(--acc);color:var(--bg)}.s{background:none;color:var(--acc)}
+.ph{position:relative;overflow:hidden;border-radius:18px;background:repeating-linear-gradient(135deg,var(--soft) 0 14px,var(--sky) 14px 15px);border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:13px;text-align:center}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph span{padding:10px}
+.hv{aspect-ratio:4/3}
+section{padding:68px 0}.alt{background:var(--soft)}
+h2{font-size:clamp(24px,3.4vw,34px);line-height:1.2;margin:8px 0 26px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:22px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card b{color:var(--acc);font-size:13px}.card h3{margin:6px 0 8px;font-size:17px}.card p{margin:0;color:var(--mut);font-size:15px}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--sky)}
+.tl li{position:relative;padding:0 0 20px 24px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--acc)}
+.tl time{display:block;color:var(--acc);font-size:13px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}@media(max-width:800px){.two{grid-template-columns:1fr}}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.gal .ph{aspect-ratio:3/2}
+.band{background:var(--acc);color:var(--bg);border-radius:18px;padding:30px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.band h3{margin:0 0 6px;font-size:22px}.band p{margin:0;max-width:560px;opacity:.92}.band .btn{background:var(--bg);color:var(--acc);border-color:var(--bg)}
+.partners{display:flex;gap:28px;flex-wrap:wrap;align-items:center;color:var(--mut);font-weight:600}
+.partners span{border:1px dashed var(--line);border-radius:10px;padding:10px 18px}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+label.c{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--mut)}label.c input{width:auto;margin-top:5px}
+.hp{position:absolute;left:-9999px}
+#msg{min-height:1.4em;font-weight:600}
+.note{font-size:13px;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mut);font-size:14px}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer details{max-width:520px;margin-top:8px}
+#top-btn{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .2s;background:var(--acc);color:var(--bg);border:0}
+#top-btn.show{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card{transition:none}}
+.banner{background:var(--acc);color:var(--bg);text-align:center;padding:9px 14px;font-size:14px}.banner a{color:inherit;font-weight:600}
+.steps .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--acc);color:var(--bg);font-weight:700;margin-bottom:8px}
+details.faq{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;background:var(--bg)}details.faq summary{cursor:pointer;font-weight:600}details.faq p{color:var(--mut);margin:10px 0 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.cols .card h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)}.cols ul{margin:0;padding-left:18px;color:var(--mut)}.cols li{margin-bottom:8px}
+@media(max-width:600px){.cols{grid-template-columns:1fr}}
+.ava{width:64px;height:64px;border-radius:50%;object-fit:cover;background:var(--sky);color:var(--acc);display:grid;place-items:center;font-weight:700;font-size:20px;margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.chip{border:1px solid var(--line);background:var(--bg);color:var(--mut);padding:5px 13px;border-radius:999px;font:600 13px system-ui;cursor:pointer}.chip.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.ev{border-left:3px solid var(--acc);padding:4px 0 4px 14px;margin-bottom:14px}.ev b{display:block;color:var(--acc);font-size:13px}
+.logos{display:flex;gap:26px;flex-wrap:wrap;align-items:center}.logos a,.logos span{color:var(--mut);font-weight:700;text-decoration:none}.logos img{height:42px;display:block}
+.dlk{display:flex;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px;text-decoration:none;color:var(--ink);background:var(--bg)}.dlk:hover{border-color:var(--acc)}.dlk em{color:var(--acc);font-style:normal;font-size:13px;font-weight:600}
+.share a{font-size:13px;margin-right:10px}
+.mapw{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px;align-items:center}@media(max-width:800px){.mapw{grid-template-columns:1fr}}
+.gl{position:relative;aspect-ratio:1;max-width:520px;width:100%;margin:0 auto}#gl{width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+#tip{position:absolute;pointer-events:none;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;box-shadow:0 6px 18px rgba(0,0,0,.18);opacity:0;transition:opacity .15s;transform:translate(-50%,-125%);white-space:nowrap;z-index:2}#tip.on{opacity:1}#tip small{display:block;color:var(--mut)}
+.tot{margin-bottom:14px}.tot b{font-size:46px;color:var(--acc);line-height:1}
+.cr{display:flex;align-items:center;gap:10px;width:100%;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:9px 12px;margin-bottom:8px;cursor:pointer;font:inherit}.cr.on{border-color:var(--acc)}.cr .d{flex:1;text-align:left}.cr .l{display:flex;gap:3px}.cr i{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 6px var(--acc)}.cr b{color:var(--acc);min-width:22px;text-align:right}
+.badge{display:inline-block;margin-left:10px;border:1px solid var(--acc);color:var(--acc);border-radius:999px;padding:1px 10px;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none}
+#pin{max-height:260px;overflow:auto}
+.g{display:grid;gap:12px}.g[hidden]{display:none}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);max-width:460px;width:calc(100% - 32px);padding:22px}dialog::backdrop{background:rgba(10,20,40,.55)}
+#pin{margin-bottom:14px}#pin h3{margin:0 0 4px}#pin p{margin:0 0 10px;color:var(--mut)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip"></a>
+<div class="banner" id="banner"><a href="#path" id="bl"></a></div>
+<header><div class="w">
+<a href="#top" aria-label="UAS"><img class="logo" src="assets/logo.png" alt="Unione Accademica Sammarinese"></a>
+<nav id="nav"><a href="#about" data-i="n1"></a><a href="#news" id="nnews" data-i="n6" hidden></a><a href="#team" id="nteam" data-i="n7" hidden></a><a href="#faq" data-i="n8"></a><a href="#join" data-i="n3"></a><a href="#contact" data-i="n4"></a></nav>
+<div class="tools">
+<div class="lang" role="group" aria-label="Language"><button data-l="it">IT</button><button data-l="en">EN</button></div>
+<button class="ib" id="theme" aria-label="Theme">◐</button>
+<button class="ib" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+</div><div id="bar"></div></div></header>
+
+<main id="main"><span id="top"></span>
+<div class="hero"><div class="w">
+<div><div class="eyebrow" data-i="eb"></div><h1 data-i="h1"></h1><p class="lead" data-i="lead"></p>
+<div class="btns"><a class="btn p" href="#join" data-i="cta1"></a><a class="btn s" href="#about" data-i="cta2"></a></div></div>
+<figure class="ph hv" style="margin:0"><img src="assets/hero.jpg" alt="" onerror="this.remove()"><span>assets/hero.jpg</span></figure>
+</div></div>
+
+<section id="about"><div class="w rv">
+<div class="eyebrow" data-i="n1"></div><h2 data-i="ah"></h2>
+<div class="grid">
+<div class="card"><b>01</b><h3 data-i="c1t"></h3><p data-i="c1p"></p></div>
+<div class="card"><b>02</b><h3 data-i="c2t"></h3><p data-i="c2p"></p></div>
+<div class="card"><b>03</b><h3 data-i="c3t"></h3><p data-i="c3p"></p></div>
+<div class="card"><b>04</b><h3 data-i="c4t"></h3><p data-i="c4p"></p></div>
+</div></div></section>
+
+<section id="why"><div class="w rv"><div class="eyebrow" data-i="xwh"></div><h2 data-i="xwt" style="max-width:760px;font-size:clamp(20px,2.6vw,26px);font-weight:500"></h2>
+<div class="cols">
+<div class="card"><h3 data-i="xpr"></h3><ul><li data-i="xp1"></li><li data-i="xp2"></li><li data-i="xp3"></li></ul></div>
+<div class="card"><h3 data-i="xan"></h3><ul><li data-i="xa1"></li><li data-i="xa2"></li><li data-i="xa3"></li></ul></div>
+</div></div></section>
+
+<section id="path" class="alt"><div class="w two rv">
+<div><div class="eyebrow" data-i="n2"></div><h2 data-i="ph"></h2><p class="lead" data-i="pp"></p>
+</div>
+<ul class="tl">
+<li><time>29/12/2025</time><span data-i="t1"></span></li>
+<li><time>01/01/2026</time><span data-i="t2"></span></li>
+<li><time>14/05/2026</time><span data-i="t3"></span></li>
+<li><time>28/06/2026</time><span data-i="t4"></span></li>
+<li><time data-i="t5d"></time><span data-i="t5"></span></li>
+</ul></div></section>
+
+<section id="news" hidden><div class="w two">
+<div id="nwrap"><div class="eyebrow" data-i="n6"></div><h2 data-i="nt"></h2><div class="grid" id="nlist" style="grid-template-columns:1fr"></div></div>
+<div id="ewrap"><div class="eyebrow" data-i="xev"></div><h2 style="visibility:hidden;margin-bottom:18px">.</h2><div id="elist"></div></div>
+</div></section>
+
+<section id="docs" class="alt" hidden><div class="w"><div class="eyebrow" data-i="xdh"></div><h2 data-i="xdt"></h2><div id="dlist"></div></div></section>
+
+<section id="team" hidden><div class="w"><div class="eyebrow" data-i="xth"></div><h2 data-i="xtt"></h2><div class="grid" id="tlist"></div></div></section>
+
+<section id="map" class="alt" hidden><div class="w"><div class="eyebrow"><span data-i="xmh"></span><span class="badge" data-i="xbt"></span></div><h2 data-i="xmt2"></h2>
+<div class="mapw"><div class="gl"><canvas id="gl" role="img"></canvas><div id="tip" role="status"></div></div>
+<div><div class="tot"><b id="tn">0</b> <span data-i="xtn"></span></div><div id="cl"></div>
+<p class="note" id="emp" data-i="xem" hidden></p>
+<div class="card" id="pin" hidden></div>
+<p><a class="btn p" href="#join" data-role="abroad" data-i="xgm"></a></p><p class="note" data-i="xhi"></p><p class="note" data-i="xmt"></p></div></div>
+<div class="grid" id="mlist" style="margin-top:24px"></div></div></section>
+
+<section><div class="w rv"><div class="eyebrow" data-i="gh"></div><h2 data-i="gt"></h2>
+<div class="gal">
+<figure class="ph" style="margin:0"><img src="assets/photo1.jpg" alt="" onerror="this.remove()"><span>assets/photo1.jpg</span></figure>
+<figure class="ph" style="margin:0"><img src="assets/photo2.jpg" alt="" onerror="this.remove()"><span>assets/photo2.jpg</span></figure>
+<figure class="ph" style="margin:0"><img src="assets/photo3.jpg" alt="" onerror="this.remove()"><span>assets/photo3.jpg</span></figure>
+</div></div></section>
+
+<section id="abroad"><div class="w rv"><div class="band">
+<div><h3 data-i="abh"></h3><p data-i="abp"></p></div>
+<a class="btn" href="#join" data-role="abroad" data-i="abc"></a></div></div></section>
+
+<section id="steps"><div class="w rv"><div class="eyebrow" data-i="xsh"></div><h2 data-i="xst"></h2>
+<div class="grid steps">
+<div class="card"><span class="n">1</span><h3 data-i="xs1t"></h3><p data-i="xs1p"></p></div>
+<div class="card"><span class="n">2</span><h3 data-i="xs2t"></h3><p data-i="xs2p"></p></div>
+<div class="card"><span class="n">3</span><h3 data-i="xs3t"></h3><p data-i="xs3p"></p></div>
+</div></div></section>
+
+<section id="faq" class="alt"><div class="w rv"><div class="eyebrow">FAQ</div><h2 data-i="xfh"></h2><div style="max-width:760px">
+<details class="faq"><summary data-i="xq1"></summary><p data-i="xr1"></p></details>
+<details class="faq"><summary data-i="xq2"></summary><p data-i="xr2"></p></details>
+<details class="faq"><summary data-i="xq3"></summary><p data-i="xr3"></p></details>
+<details class="faq"><summary data-i="xq4"></summary><p data-i="xr4"></p></details>
+<details class="faq"><summary data-i="xq5"></summary><p data-i="xr5"></p></details>
+<details class="faq"><summary data-i="xq6"></summary><p data-i="xr6"></p></details>
+</div></div></section>
+
+<section id="join"><div class="w two rv">
+<div><div class="eyebrow" data-i="n3"></div><h2 data-i="jh"></h2><p class="lead" data-i="jp"></p>
+<p><a class="btn s" href="assets/modulo_di_adesione_UAS.pdf" download data-i="dl"></a></p></div>
+<form id="f" novalidate>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input id="nm" name="name" required autocomplete="name" data-ph="fn" data-al="fn">
+<input id="em" name="email" type="email" required autocomplete="email" data-ph="fe" data-al="fe">
+<select id="rl" name="role" aria-label="Role"><option value="Socia/Socio" data-i="r1"></option><option value="Sostenitrice/Sostenitore" data-i="r2"></option><option value="Sammarinese all'estero (censimento)" data-i="r3"></option><option value="Giovane UAS" data-i="r4"></option></select>
+<textarea id="ms" name="message" rows="3" data-ph="fm" data-al="fm"></textarea>
+<label class="c"><input type="checkbox" id="mp" name="map"><span data-i="xmp"></span></label>
+<div class="g" id="mpf" hidden><input id="ct" name="city" data-ph="xct"></div>
+<label class="c"><input type="checkbox" id="nl" name="newsletter" value="si"><span data-i="nl"></span></label>
+<label class="c"><input type="checkbox" id="ok" required><span data-i="ok"></span></label>
+<button class="btn p" type="submit" data-i="send"></button>
+<div id="msg" role="status" aria-live="polite"></div>
+</form></div></section>
+<section id="partners" class="alt" hidden><div class="w"><div class="eyebrow" data-i="xph"></div><div class="logos" id="plist" style="margin-top:16px"></div></div></section>
+</main>
+
+<footer id="contact"><div class="w"><div>
+<strong>Unione Accademica Sammarinese</strong><br>
+<span data-i="n4"></span>: <a href="mailto:unioneaccademicasammarinese@gmail.com" id="mail">unioneaccademicasammarinese@gmail.com</a>
+<button class="ib" id="copy" aria-label="Copy" style="width:28px;height:28px;font-size:12px;margin-left:6px">⧉</button>
+<div id="soc" style="margin-top:6px"></div><p class="note" data-i="xlg" style="margin:8px 0 0"></p>
+<details><summary data-i="pv"></summary><p class="note" data-i="pvt"></p></details>
+</div><div>© 2026 UAS</div></div></footer>
+<button class="ib" id="top-btn" aria-label="Top">↑</button>
+
+<dialog id="cdlg"><form class="g" id="cf" novalidate>
+<h3 id="ctt" style="margin:0"></h3><p class="note" data-i="xcm" style="margin:0"></p>
+<input class="hp" id="chp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input id="cnm" autocomplete="name" data-ph="xcnm"><input id="cem" type="email" autocomplete="email" data-ph="xcem">
+<select id="crs" aria-label="Motivo"><option value="Collaborazione di ricerca" data-i="xra"></option><option value="Informazioni sull'associazione" data-i="xrb"></option><option value="Opportunità di studio o lavoro" data-i="xrc"></option><option value="Altro" data-i="xrd"></option></select>
+<textarea id="cms" rows="4" data-ph="xcms"></textarea>
+<label class="c"><input type="checkbox" id="cck"><span data-i="xcck"></span></label>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn p" type="submit" data-i="xcsd"></button><button class="btn s" type="button" id="cx" data-i="xcc"></button></div>
+<div id="cs" role="status" aria-live="polite" style="font-weight:600"></div></form></dialog>
+<script>
+var SOCIAL={linkedin:"",instagram:"",facebook:""}; // add profile URLs here
+var ENDPOINT="https://formsubmit.co/ajax/unioneaccademicasammarinese@gmail.com";
+var T={
+it:{skip:"Vai al contenuto",n1:"Chi siamo",n2:"Percorso",n3:"Unisciti",n4:"Contatti",n5:"All’estero",n6:"News",nt:"Ultime notizie.",nm:"Leggi di più",n7:"Team",n8:"FAQ",xev:"Prossimi eventi",xall:"Tutti",xdh:"Documenti",xdt:"Statuto, moduli e materiali.",xth:"Team",xtt:"Le persone di UAS.",xmh:"Comunità",xmt:"Ricercatori e accademici sammarinesi. Compaiono solo i membri che hanno dato il consenso.",xph:"In collaborazione con",
+xbn:"Prossimo appuntamento: hackathon con istituzioni europee, marzo 2027 →",
+xwh:"Perché UAS",xwt:"San Marino è piccola e fuori dalla cittadinanza europea: molte opportunità di studio e ricerca si perdono e le competenze dei sammarinesi restano poco visibili. UAS nasce per cambiare questo.",xpr:"Il problema",xan:"La risposta di UAS",
+xp1:"Ammissioni e fondi di ricerca più complicati",xa1:"Informazione e supporto a chi vuole studiare fuori",xp2:"Opportunità che arrivano tardi o non arrivano",xa2:"Una rete europea tramite Eurodoc",xp3:"Competenze sparse e poco visibili",xa3:"Censimento e coordinamento del rientro",
+xsh:"Come aderire",xst:"Tre passi.",xs1t:"Compila il modulo",xs1p:"Scegli il tuo ruolo e invia la richiesta.",xs2t:"Ti rispondiamo",xs2p:"Ricevi una email con le informazioni sull’adesione.",xs3t:"Entri nella rete",xs3p:"Partecipi alle attività e ricevi gli aggiornamenti.",
+xfh:"Domande frequenti",xq1:"Chi può aderire?",xr1:"UAS rappresenta i ricercatori e gli accademici di San Marino e a San Marino, in territorio e all’estero. Se non sei sicuro di rientrare, scrivici.",
+xq2:"Che differenza c’è tra socio, sostenitore e Giovane UAS?",xr2:"Diritti e doveri di ogni ruolo sono definiti dallo statuto e dal regolamento. Scrivici per i dettagli.",
+xq3:"L’adesione è gratuita?",xr3:"Le condizioni di adesione sono indicate nello statuto e nel regolamento. Per dubbi, scrivici.",
+xq4:"Vivo all’estero: posso partecipare?",xr4:"Sì. UAS vuole censire e coinvolgere i sammarinesi che studiano o lavorano nella ricerca all’estero, compresi quelli nati e cresciuti fuori da San Marino.",
+xq5:"Come usate i miei dati?",xr5:"Solo per gestire la richiesta e le comunicazioni dell’associazione, ai sensi della normativa sammarinese. Compari in elenchi pubblici solo con il tuo consenso.",
+xq6:"Come vi contatto?",xr6:"Scrivi a unioneaccademicasammarinese@gmail.com.",
+xmt2:"La nostra rete nel mondo.",xbt:"Versione di prova",xtn:"membri accesi sulla mappa",xgm:"Entra nella mappa",xem:"Nessun punto acceso per ora: sarai il primo?",xga:"Globo con i membri UAS nel mondo",xct:"Città e paese",xc_europe:"Europa",xc_asia:"Asia",xc_africa:"Africa",xc_north_america:"Nord America",xc_south_america:"Sud America",xc_oceania:"Oceania",
+xmp:"Voglio comparire sulla mappa pubblica con nome, cognome e città. I messaggi dei visitatori mi arrivano tramite UAS: la mia email resta privata.",xcb:"Contatta",xcm:"Scrivi il motivo del contatto. UAS inoltra il messaggio alla persona, che decide se risponderti. La sua email non viene mai mostrata.",xcnm:"Il tuo nome",xcem:"La tua email",xcms:"Motivo del contatto e messaggio",xcck:"Acconsento che UAS inoltri il mio messaggio e la mia email alla persona contattata.",xcsd:"Invia messaggio",xcc:"Annulla",xra:"Collaborazione di ricerca",xrb:"Informazioni sull’associazione",xrc:"Opportunità di studio o lavoro",xrd:"Altro",xcok:"Messaggio inviato. UAS lo inoltra alla persona: controlla la tua email per la conferma.",xhi:"Clicca un punto sul globo per contattare la persona tramite UAS.",
+xlg:"Associazione senza fini di lucro · Costituita il 29/12/2025 · Statuto depositato il 01/01/2026 · Membro di Eurodoc dal 28/06/2026",eb:"Associazione senza fini di lucro",
+h1:"I ricercatori e gli accademici di San Marino, in rete.",
+lead:"Unione Accademica Sammarinese rappresenta i ricercatori e gli accademici sammarinesi, dentro e fuori dal territorio, e li connette al panorama scientifico europeo.",
+cta1:"Diventa socio",cta2:"Scopri di più",ah:"Valorizzare il potenziale della nostra comunità accademica.",
+c1t:"Rappresentanza",c1p:"Una voce unica per ricercatori e accademici sammarinesi.",
+c2t:"Rete europea",c2p:"Membri di Eurodoc, la federazione europea dei giovani ricercatori.",
+c3t:"Rientro e competenze",c3p:"Censire le specializzazioni e favorire il rientro di chi si è formato all’estero.",
+c4t:"Supporto agli studenti",c4p:"Orientamento e opportunità per chi sceglie l’istruzione superiore.",
+ph:"Un anno di attività.",pp:"Dalla presentazione alla Consulta dei cittadini sammarinesi all’estero a oggi.",pt:"Partner in arrivo",
+t1:"Fondazione ufficiale",t2:"Deposito dello statuto",t3:"Incontro con le scuole superiori",t4:"Ingresso in Eurodoc",t5d:"Marzo 2027",t5:"Hackathon con istituzioni europee",
+gh:"Immagini",gt:"UAS in azione.",
+abh:"Sei sammarinese e studi o lavori nella ricerca all’estero?",abp:"Vogliamo censire le esperienze della comunità sammarinese nel mondo, comprese quelle di chi è nato e cresciuto fuori da San Marino.",abc:"Fatti censire",
+jh:"Una sola richiesta per entrare nella rete.",jp:"Compila il modulo: ti risponderemo con le informazioni sull’adesione. Preferisci la carta? Scarica il modulo.",dl:"Scarica il modulo di adesione",
+fn:"Nome e cognome",fe:"Email",fm:"Messaggio (facoltativo)",r1:"Socia/Socio",r2:"Sostenitrice/Sostenitore",r3:"Sammarinese all’estero (censimento)",r4:"Giovane UAS",nl:"Desidero ricevere gli aggiornamenti via email",
+ok:"Ho preso visione di statuto e regolamento e acconsento al trattamento dei miei dati ai soli fini associativi.",send:"Invia richiesta",
+sending:"Invio in corso…",done:"Grazie! Richiesta inviata: controlla la tua email.",err:"Invio non riuscito. Scrivici a unioneaccademicasammarinese@gmail.com.",inv:"Compila nome, email corretta e consenso.",copied:"Copiato",
+pv:"Privacy",pvt:"I dati inseriti nel modulo sono usati solo per gestire la richiesta di adesione e le comunicazioni dell’associazione, ai sensi della normativa sammarinese. Il sito non usa cookie di profilazione."},
+en:{skip:"Skip to content",n1:"About",n2:"Journey",n3:"Join",n4:"Contact",n5:"Abroad",n6:"News",nt:"Latest news.",nm:"Read more",n7:"Team",n8:"FAQ",xev:"Upcoming events",xall:"All",xdh:"Documents",xdt:"Statute, forms and materials.",xth:"Team",xtt:"The people of UAS.",xmh:"Community",xmt:"Sammarinese researchers and academics. Only members who gave consent are listed.",xph:"In collaboration with",
+xbn:"Next: hackathon with European institutions, March 2027 →",
+xwh:"Why UAS",xwt:"San Marino is small and outside European citizenship: many study and research opportunities are missed and Sammarinese expertise stays hard to see. UAS was founded to change that.",xpr:"The problem",xan:"UAS’s answer",
+xp1:"Harder admissions and research funding",xa1:"Information and support for those who want to study abroad",xp2:"Opportunities that arrive late or never",xa2:"A European network through Eurodoc",xp3:"Scattered, hard-to-see expertise",xa3:"Mapping skills and coordinating the return",
+xsh:"How to join",xst:"Three steps.",xs1t:"Fill in the form",xs1p:"Choose your role and send the request.",xs2t:"We reply",xs2p:"You receive an email with membership information.",xs3t:"You join the network",xs3p:"You take part in activities and receive updates.",
+xfh:"Frequently asked questions",xq1:"Who can join?",xr1:"UAS represents the researchers and academics of San Marino and in San Marino, at home and abroad. If you are unsure you qualify, write to us.",
+xq2:"What is the difference between member, supporter and Young UAS?",xr2:"The rights and duties of each role are set out in the statute and rules. Write to us for details.",
+xq3:"Is membership free?",xr3:"Membership terms are set out in the statute and rules. If in doubt, write to us.",
+xq4:"I live abroad: can I take part?",xr4:"Yes. UAS wants to map and involve Sammarinese who study or work in research abroad, including those born and raised outside San Marino.",
+xq5:"How is my data used?",xr5:"Only to handle your request and the association’s communications, under San Marino law. You appear in public lists only with your consent.",
+xq6:"How do I contact you?",xr6:"Write to unioneaccademicasammarinese@gmail.com.",
+xmt2:"Our network around the world.",xbt:"Trial version",xtn:"members lit on the map",xgm:"Get on the Map",xem:"No lights yet: will you be the first?",xga:"Globe showing UAS members worldwide",xct:"City and country",xc_europe:"Europe",xc_asia:"Asia",xc_africa:"Africa",xc_north_america:"North America",xc_south_america:"South America",xc_oceania:"Oceania",
+xmp:"I want to appear on the public map with my name, surname and city. Visitor messages reach me through UAS: my email stays private.",xcb:"Contact",xcm:"Write the reason for contacting. UAS forwards your message to the person, who decides whether to reply. Their email is never shown.",xcnm:"Your name",xcem:"Your email",xcms:"Reason for contact and message",xcck:"I agree that UAS forwards my message and my email to the person contacted.",xcsd:"Send message",xcc:"Cancel",xra:"Research collaboration",xrb:"Information about the association",xrc:"Study or job opportunity",xrd:"Other",xcok:"Message sent. UAS forwards it to the person: check your email for the confirmation.",xhi:"Click a dot on the globe to contact the person through UAS.",
+xlg:"Non-profit association · Founded 29/12/2025 · Statutes filed 01/01/2026 · Eurodoc member since 28/06/2026",eb:"Non-profit association",
+h1:"The researchers and academics of San Marino, connected.",
+lead:"Unione Accademica Sammarinese represents Sammarinese researchers and academics, at home and abroad, and links them to the European scientific landscape.",
+cta1:"Become a member",cta2:"Learn more",ah:"Unlocking the potential of our academic community.",
+c1t:"Representation",c1p:"A single voice for Sammarinese researchers and academics.",
+c2t:"European network",c2p:"Member of Eurodoc, the European federation of early-career researchers.",
+c3t:"Return and expertise",c3p:"Mapping specialisations and supporting the return of those trained abroad.",
+c4t:"Student support",c4p:"Guidance and opportunities for those pursuing higher education.",
+ph:"A year of activity.",pp:"From the presentation to the Consulta of Sammarinese citizens abroad to today.",pt:"Partners coming soon",
+t1:"Official foundation",t2:"Statutes filed",t3:"Meeting with high schools",t4:"Joined Eurodoc",t5d:"March 2027",t5:"Hackathon with European institutions",
+gh:"Gallery",gt:"UAS in action.",
+abh:"Sammarinese and studying or researching abroad?",abp:"We want to map the experiences of the Sammarinese community worldwide, including those born and raised outside San Marino.",abc:"Get on the map",
+jh:"One request to join the network.",jp:"Fill in the form and we will reply with membership information. Prefer paper? Download the form.",dl:"Download the membership form",
+fn:"Full name",fe:"Email",fm:"Message (optional)",r1:"Member",r2:"Supporter",r3:"Sammarinese abroad (census)",r4:"Young UAS",nl:"I would like to receive updates by email",
+ok:"I have read the statute and rules and consent to my data being processed for association purposes only.",send:"Send request",
+sending:"Sending…",done:"Thank you! Request sent: check your email.",err:"Sending failed. Please write to unioneaccademicasammarinese@gmail.com.",inv:"Please enter your name, a valid email and consent.",copied:"Copied",
+pv:"Privacy",pvt:"Data entered in the form is used only to handle membership requests and association communications, under San Marino law. This site uses no tracking cookies."}};
+var L="it",$=function(i){return document.getElementById(i)};
+function setL(l){L=l;document.documentElement.lang=l;
+document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=T[l][e.dataset.i]});
+document.querySelectorAll("[data-ph]").forEach(function(e){e.placeholder=T[l][e.dataset.ph];e.setAttribute("aria-label",T[l][e.dataset.ph])});
+document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l)});
+try{localStorage.setItem("uas-lang",l)}catch(e){}if(typeof renderAll==="function")renderAll()}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setL(b.dataset.l)}});
+var s="it";try{s=localStorage.getItem("uas-lang")||(navigator.language||"it").slice(0,2)}catch(e){}
+setL(s==="en"?"en":"it");
+// data-driven sections (edit assets/*.json)
+var D={},F="",BANNER=true;
+function lc(o){return typeof o==="string"?o:(o&&(o[L]||o.it))||""}
+function safe(u){return /^(https?:\/\/|assets\/|#|mailto:)/.test(u||"")}
+function E(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function fd(d){return new Date(d).toLocaleDateString(L==="it"?"it-IT":"en-GB",{day:"numeric",month:"long",year:"numeric"})}
+function A(h,x,c){var a=E("a",c||"",x);a.href=h;a.rel="noopener";return a}
+function renderAll(){if(!D)return;
+var b=$("banner");b.hidden=!BANNER;$("bl").textContent=T[L].xbn;
+var n=(D.news||[]).slice().sort(function(a,b){return a.date<b.date?1:-1}).slice(0,6),l=$("nlist");l.textContent="";
+n.forEach(function(x){var c=E("div","card");c.appendChild(E("b","",fd(x.date)));c.appendChild(E("h3","",lc(x.title)));c.appendChild(E("p","",lc(x.text)));
+var f=E("div","share");f.style.marginTop="10px";if(safe(x.link))f.appendChild(A(x.link,T[L].nm+" →"));
+var u=encodeURIComponent(location.href.split("#")[0]),t=encodeURIComponent(lc(x.title));
+[["WhatsApp","https://wa.me/?text="+t+"%20"+u],["LinkedIn","https://www.linkedin.com/sharing/share-offsite/?url="+u]].forEach(function(s){var a=A(s[1],s[0]);a.target="_blank";f.appendChild(a)});
+c.appendChild(f);l.appendChild(c)});
+var ev=(D.events||[]).slice().sort(function(a,b){return a.date>b.date?1:-1}),el=$("elist");el.textContent="";
+ev.forEach(function(x){var d=E("div","ev");d.appendChild(E("b","",x.label?lc(x.label):fd(x.date)));d.appendChild(E("span","",lc(x.title)));el.appendChild(d)});
+var hn=n.length>0,he=ev.length>0;$("news").hidden=!(hn||he);$("nnews").hidden=!(hn||he);$("nwrap").hidden=!hn;$("ewrap").hidden=!he;
+var dl=$("dlist");dl.textContent="";(D.docs||[]).forEach(function(x){if(!safe(x.file))return;var a=A(x.file,"","dlk");a.appendChild(E("span","",lc(x.title)));a.appendChild(E("em","",x.type||"PDF"));dl.appendChild(a)});
+$("docs").hidden=!(D.docs||[]).length;
+var tl=$("tlist");tl.textContent="";(D.team||[]).forEach(function(x){var c=E("div","card");
+if(safe(x.photo)){var i=E("img","ava");i.src=x.photo;i.alt=x.name;c.appendChild(i)}else c.appendChild(E("div","ava",x.name.split(" ").map(function(w){return w[0]}).slice(0,2).join("")));
+c.appendChild(E("h3","",x.name));c.appendChild(E("p","",lc(x.role)+(x.org?" · "+x.org:"")));
+var ls=x.links||{};Object.keys(ls).forEach(function(k){if(safe(ls[k])){var a=A(ls[k],k);a.style.cssText="font-size:13px;margin:8px 10px 0 0;display:inline-block";c.appendChild(a)}});tl.appendChild(c)});
+$("team").hidden=!(D.team||[]).length;$("nteam").hidden=$("team").hidden;
+renderMap();
+var pl=$("plist");pl.textContent="";(D.partners||[]).forEach(function(p){var e;if(safe(p.logo)){e=E("a");var i=E("img");i.src=p.logo;i.alt=p.name;e.appendChild(i)}else e=E("a","",p.name);if(safe(p.url)){e.href=p.url;e.rel="noopener"}pl.appendChild(e)});
+$("partners").hidden=!(D.partners||[]).length}
+["news","events","docs","team","members","partners"].forEach(function(k){fetch("assets/"+k+".json").then(function(r){return r.json()}).then(function(j){D[k]=j;renderAll()}).catch(function(){})});
+// globe
+var CONT={europe:[50,15],asia:[35,95],africa:[5,20],north_america:[45,-100],south_america:[-15,-60],oceania:[-25,135]};
+var GLOBE_CATS=["Socio"]; // categories shown on the globe: add "Sostenitore" to include supporters
+function ML(){return (D.members||[]).filter(function(m){return GLOBE_CATS.indexOf(m.categoria||"Socio")>=0})}
+var GL={lam:10,phi:23,tgt:null,sel:"",land:[],pts:[],drag:null,vis:true,tip:null,col:{},n:0};
+var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function renderMap(){var M=ML();$("map").hidden=!D.members;$("gl").setAttribute("aria-label",T[L].xga);
+$("tn").textContent=M.length;$("emp").hidden=M.length>0;
+var cl=$("cl");cl.textContent="";Object.keys(CONT).forEach(function(k){var n=M.filter(function(m){return (m.continent||"").replace("-","_")===k}).length;
+var b=E("button","cr"+(GL.sel===k?" on":""));b.appendChild(E("span","d",T[L]["xc_"+k]));var l=E("span","l");for(var i=0;i<Math.min(n,10);i++)l.appendChild(E("i"));b.appendChild(l);b.appendChild(E("b","",n));
+b.onclick=function(){GL.sel=GL.sel===k?"":k;if(GL.sel)GL.tgt={lam:CONT[k][1],phi:CONT[k][0]};renderMap()};cl.appendChild(b)});
+renderPin();var ml=$("mlist");ml.textContent="";M.filter(function(m){return !GL.sel||(m.continent||"").replace("-","_")===GL.sel}).forEach(function(m){var c=E("div","card");c.appendChild(E("h3","",m.name));c.appendChild(E("p","",[lc(m.role),m.city].filter(Boolean).join(" · ")));var cb=E("button","btn s",T[L].xcb);cb.type="button";cb.style.marginTop="10px";cb.onclick=function(){openC(m)};c.appendChild(cb);ml.appendChild(c)})}
+var cv=$("gl"),cx=cv.getContext("2d");
+function proj(lat,lon,R,c){var p=lat*Math.PI/180,l=(lon-GL.lam)*Math.PI/180,p0=GL.phi*Math.PI/180;
+var cc=Math.sin(p0)*Math.sin(p)+Math.cos(p0)*Math.cos(p)*Math.cos(l);
+return {x:c+R*Math.cos(p)*Math.sin(l),y:c-R*(Math.cos(p0)*Math.sin(p)-Math.sin(p0)*Math.cos(p)*Math.cos(l)),c:cc}}
+var SM=[43.94,12.45];
+function proj3(lat,lon,R,c,h){var q=proj(lat,lon,R,c);return {x:c+(q.x-c)*(1+h),y:c+(q.y-c)*(1+h),c:q.c}}
+function arc(la,lo,R,c,t,col,al){var a=la*Math.PI/180,b=lo*Math.PI/180,a2=SM[0]*Math.PI/180,b2=SM[1]*Math.PI/180;
+var v1=[Math.cos(a)*Math.cos(b),Math.cos(a)*Math.sin(b),Math.sin(a)],v2=[Math.cos(a2)*Math.cos(b2),Math.cos(a2)*Math.sin(b2),Math.sin(a2)];
+var d=Math.acos(Math.max(-1,Math.min(1,v1[0]*v2[0]+v1[1]*v2[1]+v1[2]*v2[2])));if(d<.02)return;
+cx.beginPath();var on=false;for(var i=0;i<=40;i++){var u=i/40,A=Math.sin((1-u)*d)/Math.sin(d),B=Math.sin(u*d)/Math.sin(d),
+x=A*v1[0]+B*v2[0],y=A*v1[1]+B*v2[1],z=A*v1[2]+B*v2[2],pl=Math.asin(z)*180/Math.PI,pn=Math.atan2(y,x)*180/Math.PI,
+q=proj3(pl,pn,R,c,Math.sin(Math.PI*u)*Math.min(.22,d*.14));
+if(q.c>0.02){if(!on){cx.moveTo(q.x,q.y);on=true}else cx.lineTo(q.x,q.y)}else on=false}
+cx.globalAlpha=al;cx.strokeStyle=col;cx.lineWidth=1.2;cx.setLineDash([5,7]);cx.lineDashOffset=RM?0:-t/60;cx.stroke();cx.setLineDash([]);cx.globalAlpha=1}
+function size(){var s=cv.clientWidth,d=window.devicePixelRatio||1;cv.width=s*d;cv.height=s*d;cx.setTransform(d,0,0,d,0,0);GL.s=s}
+addEventListener("resize",size);size();
+fetch("assets/land.json").then(function(r){return r.json()}).then(function(j){GL.land=j}).catch(function(){});
+new IntersectionObserver(function(e){GL.vis=e[0].isIntersecting}).observe(cv);
+function draw(t){requestAnimationFrame(draw);if(!GL.vis||document.hidden)return;
+var s=GL.s,R=s*0.46,c=s/2;
+if(GL.n++%60===0){var cs=getComputedStyle(document.documentElement);["--acc","--sky","--soft","--mut","--line"].forEach(function(k){GL.col[k]=cs.getPropertyValue(k).trim()})}
+var C=GL.col;
+if(GL.tgt){var dl=((GL.tgt.lam-GL.lam+540)%360)-180;GL.lam+=dl*0.08;GL.phi+=(GL.tgt.phi-GL.phi)*0.08;if(Math.abs(dl)<.3&&Math.abs(GL.tgt.phi-GL.phi)<.3)GL.tgt=null}
+else if(!GL.drag&&Math.abs(GL.vx||0)>.02){GL.lam+=GL.vx;GL.vx*=.94}
+else if(!GL.drag&&!GL.tip&&!RM)GL.lam-=0.12;
+cx.clearRect(0,0,s,s);
+var at=cx.createRadialGradient(c,c,R*.97,c,c,R*1.14);at.addColorStop(0,C["--acc"]);at.addColorStop(1,"transparent");cx.globalAlpha=.28;cx.fillStyle=at;cx.beginPath();cx.arc(c,c,R*1.14,0,7);cx.fill();cx.globalAlpha=1;
+var g=cx.createRadialGradient(c-R*.3,c-R*.3,R*.1,c,c,R);g.addColorStop(0,C["--soft"]);g.addColorStop(1,C["--sky"]);
+cx.beginPath();cx.arc(c,c,R,0,7);cx.fillStyle=g;cx.fill();cx.strokeStyle=C["--line"];cx.stroke();
+cx.strokeStyle=C["--line"];cx.lineWidth=.6;cx.globalAlpha=.7;
+for(var la=-60;la<=60;la+=30){cx.beginPath();var o=false;for(var lo=-180;lo<=180;lo+=6){var q=proj(la,lo,R,c);if(q.c>0){o?cx.lineTo(q.x,q.y):cx.moveTo(q.x,q.y);o=true}else o=false}cx.stroke()}
+for(var lo=-180;lo<180;lo+=30){cx.beginPath();var o=false;for(var la=-84;la<=84;la+=6){var q=proj(la,lo,R,c);if(q.c>0){o?cx.lineTo(q.x,q.y):cx.moveTo(q.x,q.y);o=true}else o=false}cx.stroke()}
+cx.globalAlpha=1;cx.fillStyle=C["--mut"];var L2=GL.land;
+for(var i=0;i<L2.length;i+=2){var p=proj(L2[i]/10,L2[i+1]/10,R,c);if(p.c>0){cx.globalAlpha=.15+.5*p.c;cx.fillRect(p.x-1,p.y-1,2,2)}}
+cx.globalAlpha=1;GL.pts=[];var G={};
+ML().forEach(function(m){if(typeof m.lat==="number"&&typeof m.lon==="number"&&Math.hypot(m.lat-SM[0],m.lon-SM[1])>1.5){var on=!GL.sel||(m.continent||"").replace("-","_")===GL.sel;arc(m.lat,m.lon,R,c,t,C["--acc"],on?.55:.15)}});
+var hp=proj(SM[0],SM[1],R,c);if(hp.c>0.05){var ph=RM?.5:(t%2400)/2400;cx.strokeStyle=C["--acc"];cx.globalAlpha=(1-ph)*.8;cx.lineWidth=1.5;cx.beginPath();cx.arc(hp.x,hp.y,6+ph*20,0,7);cx.stroke();cx.globalAlpha=1;cx.lineWidth=1}
+
+ML().forEach(function(m){if(typeof m.lat!=="number"||typeof m.lon!=="number")return;var k=m.lat+","+m.lon;(G[k]=G[k]||[]).push(m)});
+Object.keys(G).forEach(function(k){var ms=G[k],m=ms[0],p=proj(m.lat,m.lon,R,c);if(p.c<=0.05)return;
+var sel=!GL.sel||(m.continent||"").replace("-","_")===GL.sel,pu=RM?0:Math.sin(t/500+m.lat)*2,n=Math.min(ms.length,10),big=ms.some(function(x){return x.role});
+var r=(sel?18+pu:10)+n*1.2;var gr=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,r);gr.addColorStop(0,C["--acc"]);gr.addColorStop(1,"transparent");
+cx.globalAlpha=sel?.75:.3;cx.fillStyle=gr;cx.beginPath();cx.arc(p.x,p.y,r,0,7);cx.fill();
+cx.globalAlpha=sel?1:.5;cx.fillStyle=C["--acc"];cx.beginPath();cx.arc(p.x,p.y,(big?5:3.5)+n*.35,0,7);cx.fill();cx.globalAlpha=1;
+GL.pts.push({ms:ms,x:p.x,y:p.y})})}
+function hit(e){var b=cv.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,best=null,bd=18;
+GL.pts.forEach(function(p){var d=Math.hypot(p.x-x,p.y-y);if(d<bd){bd=d;best=p}});
+var tp=$("tip");GL.tip=best;if(best){tp.textContent="";var ms=best.ms;if(ms.length===1){tp.appendChild(E("b","",ms[0].name));tp.appendChild(E("small","",[lc(ms[0].role),ms[0].city].filter(Boolean).join(" · ")))}else{tp.appendChild(E("b","",ms[0].city+" · "+ms.length));ms.slice(0,6).forEach(function(x){tp.appendChild(E("small","",x.name+(x.role?" ("+lc(x.role)+")":"")))});if(ms.length>6)tp.appendChild(E("small","","+"+(ms.length-6)))}tp.style.left=best.x+"px";tp.style.top=best.y+"px";tp.classList.add("on")}else tp.classList.remove("on")}
+cv.onpointerdown=function(e){GL.drag={x:e.clientX,y:e.clientY};GL.tgt=null;hit(e);GL.down={x:e.clientX,y:e.clientY,g:GL.tip?GL.tip.ms:null};cv.setPointerCapture(e.pointerId)};
+cv.onpointermove=function(e){if(GL.drag){GL.vx=-(e.clientX-GL.drag.x)*.4;GL.lam+=GL.vx;GL.phi=Math.max(-75,Math.min(75,GL.phi+(e.clientY-GL.drag.y)*.4));GL.drag={x:e.clientX,y:e.clientY};GL.tip=null;$("tip").classList.remove("on")}else hit(e)};
+cv.onpointerup=function(e){if(GL.down&&Math.hypot(e.clientX-GL.down.x,e.clientY-GL.down.y)<6){GL.pin=GL.down.g;renderPin()}GL.drag=null;GL.down=null};cv.onpointerleave=function(){GL.drag=null;GL.tip=null;$("tip").classList.remove("on")};
+requestAnimationFrame(draw);
+function renderPin(){var p=$("pin"),g=GL.pin;p.hidden=!g;if(!g)return;p.textContent="";
+if(g.length>1)p.appendChild(E("h3","",g[0].city+" · "+g.length));
+g.forEach(function(m){var d=E("div");d.style.marginBottom="12px";d.appendChild(E("b","",m.name));d.appendChild(E("p","",[lc(m.role),g.length>1?"":m.city].filter(Boolean).join(" · ")));var b=E("button","btn s",T[L].xcb);b.type="button";b.onclick=function(){openC(m)};d.appendChild(b);p.appendChild(d)})}
+// contact relay: the visitor writes to UAS, UAS forwards to the member (member email is never on the site)
+var CM=null;
+function openC(m){CM=m;$("ctt").textContent=T[L].xcb+" · "+m.name;$("cs").textContent="";$("cdlg").showModal()}
+$("cx").onclick=function(){$("cdlg").close()};
+$("cf").onsubmit=function(ev){ev.preventDefault();var s=$("cs");
+if(!$("cnm").value.trim()||!/^\S+@\S+\.\S+$/.test($("cem").value)||!$("cms").value.trim()||!$("cck").checked){s.textContent=T[L].inv;return}
+s.textContent=T[L].sending;
+var d={name:$("cnm").value,email:$("cem").value,motivo:$("crs").value,messaggio:$("cms").value,destinatario:CM.name,citta_destinatario:CM.city||"",lingua:L,_honey:$("chp").value,
+_subject:"Messaggio per "+CM.name+" (UAS)",_template:"table",_captcha:"false",
+_autoresponse:L==="it"?"Grazie! Abbiamo ricevuto il tuo messaggio e lo inoltreremo a "+CM.name+". La persona decide se risponderti; per tutela della privacy non condividiamo i suoi contatti. Unione Accademica Sammarinese":"Thank you! We received your message and will forward it to "+CM.name+". The person decides whether to reply; to protect their privacy we do not share their contact details. Unione Accademica Sammarinese"};
+fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)})
+.then(function(r){return r.json()}).then(function(j){if(j.success==="true"||j.success===true){s.textContent=T[L].xcok;$("cf").reset();setTimeout(function(){$("cdlg").close()},3500)}else throw 0})
+.catch(function(){s.textContent=T[L].err})};
+// theme
+var root=document.documentElement;
+try{var th=localStorage.getItem("uas-theme");if(th)root.dataset.theme=th}catch(e){}
+$("theme").onclick=function(){var d=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;var n=d?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("uas-theme",n)}catch(e){}};
+// mobile menu
+$("burger").onclick=function(){var o=$("nav").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("nav").onclick=function(){$("nav").classList.remove("open");$("burger").setAttribute("aria-expanded",false)};
+// progress + top button
+addEventListener("scroll",function(){var h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);$("bar").style.width=(p*100)+"%";$("top-btn").classList.toggle("show",h.scrollTop>600)},{passive:true});
+$("top-btn").onclick=function(){scrollTo({top:0})};
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+// preselect role from census button
+document.querySelectorAll("[data-role]").forEach(function(a){a.onclick=function(){$("rl").selectedIndex=2;$("mp").checked=true;$("mpf").hidden=false}});
+$("mp").onchange=function(){$("mpf").hidden=!this.checked};
+// copy email
+$("copy").onclick=function(){var b=this;try{navigator.clipboard.writeText($("mail").textContent);b.textContent="✓";b.title=T[L].copied;setTimeout(function(){b.textContent="⧉"},1500)}catch(e){}};
+// social (only filled ones)
+Object.keys(SOCIAL).forEach(function(k){if(SOCIAL[k]){var a=document.createElement("a");a.href=SOCIAL[k];a.textContent=k;a.rel="noopener";a.style.marginRight="12px";$("soc").appendChild(a)}});
+// form
+$("f").onsubmit=function(ev){ev.preventDefault();var m=$("msg");
+if(!$("nm").value.trim()||!/^\S+@\S+\.\S+$/.test($("em").value)||!$("ok").checked||($("mp").checked&&!$("ct").value.trim())){m.textContent=T[L].inv;return}
+m.textContent=T[L].sending;
+var d={name:$("nm").value,email:$("em").value,role:$("rl").value,message:$("ms").value,newsletter:$("nl").checked?"sì":"no",city:$("ct").value,mappa:$("mp").checked?"sì":"no",lingua:L,_honey:document.querySelector(".hp").value,
+_subject:"Nuova richiesta UAS – "+$("rl").value,_template:"table",_captcha:"false",
+_autoresponse:L==="it"?"Grazie per averci scritto! Abbiamo ricevuto la tua richiesta e ti risponderemo presto. Unione Accademica Sammarinese":"Thank you for writing to us! We received your request and will reply soon. Unione Accademica Sammarinese"};
+fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)})
+.then(function(r){return r.json()}).then(function(j){if(j.success==="true"||j.success===true){m.textContent=T[L].done;$("f").reset();$("mpf").hidden=true}else throw 0})
+.catch(function(){m.textContent=T[L].err})};
+</script>
+</body></html>

@@ -1,0 +1,202 @@
+[
+ {
+  "name": "Lorenzo Calzolari",
+  "city": "Grenoble",
+  "continent": "europe",
+  "lat": 45.19,
+  "lon": 5.72,
+  "role": {
+   "it": "Presidente",
+   "en": "President"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Francesco Moroni",
+  "city": "Londra",
+  "continent": "europe",
+  "lat": 51.51,
+  "lon": -0.13,
+  "role": {
+   "it": "Segretario",
+   "en": "Secretary"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Giovanni Maria Zonzini",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "role": {
+   "it": "Vice-presidente",
+   "en": "Vice-president"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Francesco Santi",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "role": {
+   "it": "Tesoriere",
+   "en": "Treasurer"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Martina Zafferani",
+  "city": "Boston",
+  "continent": "north-america",
+  "lat": 42.36,
+  "lon": -71.06,
+  "role": {
+   "it": "Consigliere",
+   "en": "Board member"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Marco Terenzi",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "role": {
+   "it": "Consigliere",
+   "en": "Board member"
+  },
+  "categoria": "Socio"
+ },
+ {
+  "name": "Marco Muscioni",
+  "city": "Bologna",
+  "continent": "europe",
+  "lat": 44.49,
+  "lon": 11.34,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Elena Giovannini",
+  "city": "Austria",
+  "continent": "europe",
+  "lat": 47.5,
+  "lon": 14.5,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Giuseppe Giardi",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Davide Venturini",
+  "city": "Svizzera",
+  "continent": "europe",
+  "lat": 46.8,
+  "lon": 8.2,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Paolo Rondelli",
+  "city": "Australia",
+  "continent": "oceania",
+  "lat": -25.3,
+  "lon": 133.8,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Irene Mazza",
+  "city": "Londra",
+  "continent": "europe",
+  "lat": 51.51,
+  "lon": -0.13,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Pietro Grassi",
+  "city": "Milano",
+  "continent": "europe",
+  "lat": 45.46,
+  "lon": 9.19,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Walter Donini",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Arianna Serra",
+  "city": "Gerusalemme",
+  "continent": "asia",
+  "lat": 31.77,
+  "lon": 35.21,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Nicola Renzi",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Erica Fabbri",
+  "city": "Torino",
+  "continent": "europe",
+  "lat": 45.07,
+  "lon": 7.69,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Andrea Muratori",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Giovanni Amati",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Marco Molari",
+  "city": "San Marino",
+  "continent": "europe",
+  "lat": 43.94,
+  "lon": 12.45,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Jacopo Taddei",
+  "city": "Madrid",
+  "continent": "europe",
+  "lat": 40.42,
+  "lon": -3.7,
+  "categoria": "Socio"
+ },
+ {
+  "name": "Chiara Giardi",
+  "city": "Lucca",
+  "continent": "europe",
+  "lat": 43.84,
+  "lon": 10.5,
+  "categoria": "Socio"
+ }
+]
