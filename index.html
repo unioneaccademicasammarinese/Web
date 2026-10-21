@@ -359,6 +359,7 @@ addEventListener("resize",size);size();
 fetch("assets/land.json").then(function(r){return r.json()}).then(function(j){GL.land=j}).catch(function(){});
 new IntersectionObserver(function(e){GL.vis=e[0].isIntersecting}).observe(cv);
 function draw(t){requestAnimationFrame(draw);if(!GL.vis||document.hidden)return;
+if(cv.clientWidth&&cv.clientWidth!==GL.s)size();if(!GL.s)return;
 var s=GL.s,R=s*0.46,c=s/2;
 if(GL.n++%60===0){var cs=getComputedStyle(document.documentElement);["--acc","--sky","--soft","--mut","--line"].forEach(function(k){GL.col[k]=cs.getPropertyValue(k).trim()})}
 var C=GL.col;
