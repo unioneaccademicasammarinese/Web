@@ -106,6 +106,12 @@ dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);colo
 .rail .sb{max-width:46px;overflow:hidden}.rail .sb:hover,.rail .sb:focus-visible{max-width:290px;border-color:var(--acc)}
 #soc{display:flex;gap:10px;flex-wrap:wrap}#soc .sb{box-shadow:none;font-size:13px;height:40px}
 @media(min-width:1200px){#soc{display:none}}
+.lg{position:relative;width:86px;height:40px;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--acc);cursor:pointer;flex:none}
+.lg .fl{position:absolute;top:5px;width:24px;height:16px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.18);transition:opacity .3s,filter .3s}.lg .fi{left:6px}.lg .fg{right:6px}
+.lg[data-l="it"] .fg,.lg[data-l="en"] .fi{opacity:.4;filter:grayscale(.7)}
+.lg .nd{position:absolute;inset:0;width:100%;height:100%;fill:currentColor}.lg .ndg{transform-origin:42px 32px;transform:rotate(-50deg);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}.lg[data-l="en"] .ndg{transform:rotate(50deg)}
+.lg:hover{border-color:var(--acc)}
+@media(prefers-reduced-motion:reduce){.lg .ndg,.lg .fl{transition:none}}
 </style>
 </head>
 <body>
@@ -115,7 +121,7 @@ dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);colo
 <a class="brand" href="#top" aria-label="UAS"><img class="logo" src="assets/logo.png" alt="Unione Accademica Sammarinese"><img class="flag" src="assets/flag-sm.png" alt="San Marino" width="37" height="28"></a>
 <nav id="nav"><a href="#about" data-i="n1"></a><a href="#news" id="nnews" data-i="n6" hidden></a><a href="#team" id="nteam" data-i="n7" hidden></a><a href="#faq" data-i="n8"></a><a href="#join" data-i="n3"></a><a href="#contact" data-i="n4"></a></nav>
 <div class="tools">
-<div class="lang" role="group" aria-label="Language"><button data-l="it">IT</button><button data-l="en">EN</button></div>
+<button class="lg" id="lg" type="button" data-l="it"><img class="fl fi" src="assets/flag-it.png" alt="" width="24" height="16"><img class="fl fg" src="assets/flag-gb.png" alt="" width="24" height="16"><svg class="nd" viewBox="0 0 84 38" aria-hidden="true"><g class="ndg"><path d="M42 32.2 L40.3 31 L42 4.5 L43.7 31 Z"/></g><circle cx="42" cy="32" r="3.4"/></svg></button>
 <button class="ib" id="theme" aria-label="Theme">◐</button>
 <button class="ib" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
 </div><div id="bar"></div></div></header>
@@ -305,10 +311,10 @@ var L="it",$=function(i){return document.getElementById(i)};
 function setL(l){L=l;document.documentElement.lang=l;
 document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=T[l][e.dataset.i]});
 document.querySelectorAll("[data-ph]").forEach(function(e){e.placeholder=T[l][e.dataset.ph];e.setAttribute("aria-label",T[l][e.dataset.ph])});
-document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l)});
-try{localStorage.setItem("uas-lang",l)}catch(e){}if(typeof renderAll==="function")renderAll();if(typeof ICON!=="undefined"&&ICON)renderSocial()}
-document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setL(b.dataset.l)}});
-var s="it";try{s=localStorage.getItem("uas-lang")||(navigator.language||"it").slice(0,2)}catch(e){}
+var g=$("lg"),lb=l==="it"?"Cambia lingua in inglese":"Switch language to Italian";g.dataset.l=l;g.setAttribute("aria-label",lb);g.title=lb;
+try{localStorage.setItem("uas-l2",l)}catch(e){}if(typeof renderAll==="function")renderAll();if(typeof ICON!=="undefined"&&ICON)renderSocial()}
+$("lg").onclick=function(){setL(L==="it"?"en":"it")};
+var s="it";try{s=localStorage.getItem("uas-l2")||"it"}catch(e){}
 setL(s==="en"?"en":"it");
 // data-driven sections (edit assets/*.json)
 var D={},F="",BANNER=true;
