@@ -23,6 +23,7 @@ a{color:var(--acc)}:focus-visible{outline:3px solid var(--acc);outline-offset:3p
 header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:20}
 header .w{display:flex;align-items:center;gap:14px;height:64px}
 .logo{height:34px;display:block}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.flag{height:28px;width:auto;display:block;border-radius:3px;border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.18)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo{filter:brightness(2.4) saturate(.6)}}
 :root[data-theme="dark"] .logo{filter:brightness(2.4) saturate(.6)}
 nav{display:flex;gap:22px;margin-left:auto}
@@ -98,13 +99,20 @@ details.faq{border:1px solid var(--line);border-radius:12px;padding:14px 18px;ma
 .g{display:grid;gap:12px}.g[hidden]{display:none}
 dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);max-width:460px;width:calc(100% - 32px);padding:22px}dialog::backdrop{background:rgba(10,20,40,.55)}
 #pin{margin-bottom:14px}#pin h3{margin:0 0 4px}#pin p{margin:0 0 10px;color:var(--mut)}
+.rail{position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:15;display:none;flex-direction:column;gap:10px}
+@media(min-width:1200px){.rail{display:flex}}
+.sb{display:inline-flex;align-items:center;gap:16px;height:44px;padding:0 12px;border:1px solid var(--line);background:var(--bg);color:var(--acc);border-radius:999px;text-decoration:none;font:600 14px system-ui;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.12);transition:max-width .25s,border-color .2s}
+.sb svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.sb svg .f{fill:currentColor;stroke:none}
+.rail .sb{max-width:46px;overflow:hidden}.rail .sb:hover,.rail .sb:focus-visible{max-width:290px;border-color:var(--acc)}
+#soc{display:flex;gap:10px;flex-wrap:wrap}#soc .sb{box-shadow:none;font-size:13px;height:40px}
+@media(min-width:1200px){#soc{display:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip"></a>
 <div class="banner" id="banner"><a href="#path" id="bl"></a></div>
 <header><div class="w">
-<a href="#top" aria-label="UAS"><img class="logo" src="assets/logo.png" alt="Unione Accademica Sammarinese"></a>
+<a class="brand" href="#top" aria-label="UAS"><img class="logo" src="assets/logo.png" alt="Unione Accademica Sammarinese"><img class="flag" src="assets/flag-sm.png" alt="San Marino" width="37" height="28"></a>
 <nav id="nav"><a href="#about" data-i="n1"></a><a href="#news" id="nnews" data-i="n6" hidden></a><a href="#team" id="nteam" data-i="n7" hidden></a><a href="#faq" data-i="n8"></a><a href="#join" data-i="n3"></a><a href="#contact" data-i="n4"></a></nav>
 <div class="tools">
 <div class="lang" role="group" aria-label="Language"><button data-l="it">IT</button><button data-l="en">EN</button></div>
@@ -216,6 +224,7 @@ dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);colo
 <details><summary data-i="pv"></summary><p class="note" data-i="pvt"></p></details>
 </div><div>© 2026 UAS</div></div></footer>
 <button class="ib" id="top-btn" aria-label="Top">↑</button>
+<aside class="rail" id="rail" aria-label="Social"></aside>
 
 <dialog id="cdlg"><form class="g" id="cf" novalidate>
 <h3 id="ctt" style="margin:0"></h3><p class="note" data-i="xcm" style="margin:0"></p>
@@ -227,10 +236,11 @@ dialog{border:1px solid var(--line);border-radius:16px;background:var(--bg);colo
 <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn p" type="submit" data-i="xcsd"></button><button class="btn s" type="button" id="cx" data-i="xcc"></button></div>
 <div id="cs" role="status" aria-live="polite" style="font-weight:600"></div></form></dialog>
 <script>
-var SOCIAL={linkedin:"",instagram:"",facebook:""}; // add profile URLs here
+var SOCIAL={eurodoc:"https://eurodoc.net",instagram:"",linkedin:""}; // paste the full profile URLs here, e.g. "https://www.instagram.com/yourprofile/"; empty ones stay hidden
 var ENDPOINT="https://formsubmit.co/ajax/unioneaccademicasammarinese@gmail.com";
 var T={
 it:{skip:"Vai al contenuto",n1:"Chi siamo",n2:"Percorso",n3:"Unisciti",n4:"Contatti",n5:"All’estero",n6:"News",nt:"Ultime notizie.",nm:"Leggi di più",n7:"Team",n8:"FAQ",xev:"Prossimi eventi",xall:"Tutti",xdh:"Documenti",xdt:"Statuto, moduli e materiali.",xth:"Team",xtt:"Le persone di UAS.",xmh:"Comunità",xmt:"Ricercatori e accademici sammarinesi. Compaiono solo i membri che hanno dato il consenso.",xph:"In collaborazione con",
+xs_eurodoc:"Visita la community Eurodoc",xs_instagram:"Seguici su Instagram",xs_linkedin:"Seguici su LinkedIn",
 xbn:"Prossimo appuntamento: hackathon con istituzioni europee, marzo 2027 →",
 xwh:"Perché UAS",xwt:"San Marino è piccola e fuori dalla cittadinanza europea: molte opportunità di studio e ricerca si perdono e le competenze dei sammarinesi restano poco visibili. UAS nasce per cambiare questo.",xpr:"Il problema",xan:"La risposta di UAS",
 xp1:"Ammissioni e fondi di ricerca più complicati",xa1:"Informazione e supporto a chi vuole studiare fuori",xp2:"Opportunità che arrivano tardi o non arrivano",xa2:"Una rete europea tramite Eurodoc",xp3:"Competenze sparse e poco visibili",xa3:"Censimento e coordinamento del rientro",
@@ -261,6 +271,7 @@ ok:"Ho preso visione di statuto e regolamento e acconsento al trattamento dei mi
 sending:"Invio in corso…",done:"Grazie! Richiesta inviata: controlla la tua email.",err:"Invio non riuscito. Scrivici a unioneaccademicasammarinese@gmail.com.",inv:"Compila nome, email corretta e consenso.",copied:"Copiato",
 pv:"Privacy",pvt:"I dati inseriti nel modulo sono usati solo per gestire la richiesta di adesione e le comunicazioni dell’associazione, ai sensi della normativa sammarinese. Il sito non usa cookie di profilazione."},
 en:{skip:"Skip to content",n1:"About",n2:"Journey",n3:"Join",n4:"Contact",n5:"Abroad",n6:"News",nt:"Latest news.",nm:"Read more",n7:"Team",n8:"FAQ",xev:"Upcoming events",xall:"All",xdh:"Documents",xdt:"Statute, forms and materials.",xth:"Team",xtt:"The people of UAS.",xmh:"Community",xmt:"Sammarinese researchers and academics. Only members who gave consent are listed.",xph:"In collaboration with",
+xs_eurodoc:"Visit the Eurodoc community",xs_instagram:"Follow us on Instagram",xs_linkedin:"Follow us on LinkedIn",
 xbn:"Next: hackathon with European institutions, March 2027 →",
 xwh:"Why UAS",xwt:"San Marino is small and outside European citizenship: many study and research opportunities are missed and Sammarinese expertise stays hard to see. UAS was founded to change that.",xpr:"The problem",xan:"UAS’s answer",
 xp1:"Harder admissions and research funding",xa1:"Information and support for those who want to study abroad",xp2:"Opportunities that arrive late or never",xa2:"A European network through Eurodoc",xp3:"Scattered, hard-to-see expertise",xa3:"Mapping skills and coordinating the return",
@@ -295,7 +306,7 @@ function setL(l){L=l;document.documentElement.lang=l;
 document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=T[l][e.dataset.i]});
 document.querySelectorAll("[data-ph]").forEach(function(e){e.placeholder=T[l][e.dataset.ph];e.setAttribute("aria-label",T[l][e.dataset.ph])});
 document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l)});
-try{localStorage.setItem("uas-lang",l)}catch(e){}if(typeof renderAll==="function")renderAll()}
+try{localStorage.setItem("uas-lang",l)}catch(e){}if(typeof renderAll==="function")renderAll();if(typeof ICON!=="undefined"&&ICON)renderSocial()}
 document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setL(b.dataset.l)}});
 var s="it";try{s=localStorage.getItem("uas-lang")||(navigator.language||"it").slice(0,2)}catch(e){}
 setL(s==="en"?"en":"it");
@@ -360,7 +371,7 @@ fetch("assets/land.json").then(function(r){return r.json()}).then(function(j){GL
 new IntersectionObserver(function(e){GL.vis=e[0].isIntersecting}).observe(cv);
 function draw(t){requestAnimationFrame(draw);if(!GL.vis||document.hidden)return;
 if(cv.clientWidth&&cv.clientWidth!==GL.s)size();if(!GL.s)return;
-var s=GL.s,R=s*0.46,c=s/2;
+var s=GL.s,R=s*0.42,c=s/2;
 if(GL.n++%60===0){var cs=getComputedStyle(document.documentElement);["--acc","--sky","--soft","--mut","--line"].forEach(function(k){GL.col[k]=cs.getPropertyValue(k).trim()})}
 var C=GL.col;
 if(GL.tgt){var dl=((GL.tgt.lam-GL.lam+540)%360)-180;GL.lam+=dl*0.08;GL.phi+=(GL.tgt.phi-GL.phi)*0.08;if(Math.abs(dl)<.3&&Math.abs(GL.tgt.phi-GL.phi)<.3)GL.tgt=null}
@@ -427,8 +438,15 @@ document.querySelectorAll("[data-role]").forEach(function(a){a.onclick=function(
 $("mp").onchange=function(){$("mpf").hidden=!this.checked};
 // copy email
 $("copy").onclick=function(){var b=this;try{navigator.clipboard.writeText($("mail").textContent);b.textContent="✓";b.title=T[L].copied;setTimeout(function(){b.textContent="⧉"},1500)}catch(e){}};
-// social (only filled ones)
-Object.keys(SOCIAL).forEach(function(k){if(SOCIAL[k]){var a=document.createElement("a");a.href=SOCIAL[k];a.textContent=k;a.rel="noopener";a.style.marginRight="12px";$("soc").appendChild(a)}});
+// social buttons (rail on wide screens, footer otherwise); only entries with a URL appear
+var ICON={
+eurodoc:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M4.5 7.5h15M4.5 16.5h15"/></svg>',
+instagram:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="f" cx="17.3" cy="6.7" r="1.2"/></svg>',
+linkedin:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M12 16v-5.5M12 13c0-1.6 1-2.6 2.4-2.6S17 11.3 17 13v3"/></svg>'};
+function renderSocial(){["rail","soc"].forEach(function(id){var box=$(id);box.textContent="";
+Object.keys(SOCIAL).forEach(function(k){if(!safe(SOCIAL[k])||!SOCIAL[k])return;var a=A(SOCIAL[k],"","sb");a.target="_blank";a.innerHTML=ICON[k]||"";a.appendChild(E("span","",T[L]["xs_"+k]||k));a.setAttribute("aria-label",T[L]["xs_"+k]||k);box.appendChild(a)});
+box.hidden=!box.children.length})}
+renderSocial();
 // form
 $("f").onsubmit=function(ev){ev.preventDefault();var m=$("msg");
 if(!$("nm").value.trim()||!/^\S+@\S+\.\S+$/.test($("em").value)||!$("ok").checked||($("mp").checked&&!$("ct").value.trim())){m.textContent=T[L].inv;return}
