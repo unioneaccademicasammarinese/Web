@@ -111,6 +111,7 @@ details.ml summary{cursor:pointer;color:var(--acc);font-weight:600}
 .sb img{width:20px;height:20px;border-radius:5px;flex:none;object-fit:cover}
 @media(max-width:760px){.navjoin{align-self:flex-start;margin:8px 0}}
 
+@media(min-width:761px) and (max-width:1000px){nav{gap:14px}nav a{font-size:13px}.navjoin{padding:6px 12px}}
 .ava{width:88px;height:88px;font-size:26px}
 a.chip{text-decoration:none}.dlk span small{display:block;color:var(--mut);font-weight:400;font-size:13px}
 .wall{background:linear-gradient(160deg,#194790,#0c2552);border-radius:18px;padding:28px 22px 30px;text-align:center}
