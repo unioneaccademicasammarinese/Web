@@ -1,8 +1,30 @@
 [
   {
     "date": "2026-10-04",
-    "title": {"it": "UAS alla Consulta dei cittadini sammarinesi all’estero", "en": "UAS at the Consulta of Sammarinese citizens abroad"},
-    "text": {"it": "A un anno dalla prima presentazione, UAS racconta il percorso fatto e propone alle comunità di lavorare insieme.", "en": "One year after the first presentation, UAS reports on its progress and proposes working together with the communities."},
-    "link": ""
+    "title": {
+      "it": "UAS alla Consulta dei cittadini sammarinesi all’estero",
+      "en": "UAS at the Consulta of Sammarinese citizens abroad"
+    },
+    "text": {
+      "it": "A un anno dalla prima presentazione, UAS racconta il percorso fatto e propone alle comunità di lavorare insieme.",
+      "en": "One year after the first presentation, UAS reports on its progress and proposes working together with the communities."
+    },
+    "link": "",
+    "photos": [
+      {
+        "src": "assets/news/consulta-2026-1.jpg",
+        "alt": {
+          "it": "Foto di gruppo davanti al cartellone della 53ª Consulta dei cittadini sammarinesi all’estero",
+          "en": "Group photo in front of the sign for the 53rd Consulta of Sammarinese citizens abroad"
+        }
+      },
+      {
+        "src": "assets/news/consulta-2026-2.jpg",
+        "alt": {
+          "it": "Intervento al podio durante la 53ª Consulta, Teatro Titano",
+          "en": "Speech at the lectern during the 53rd Consulta, Teatro Titano"
+        }
+      }
+    ]
   }
 ]
